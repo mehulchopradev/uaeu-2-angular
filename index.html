@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="namegenerator" ng-controller="namegeneratorCtrl">
+    <input type="text" placeholder="Enter First Name" ng-model="firstName"><br>
+    <input type="text" placeholder="Last Name" ng-model="lastName"><br>
+    <h2>Preview</h2>
+    <i>{{ firstName }} {{ lastName }}</i><br>
+    <button ng-click="addName()">Add</button>
+    <ul>
+      <li ng-repeat="friend in friends">
+        {{ friend }}
+      </li>
+    </ul>
+  </body>
+</html>
